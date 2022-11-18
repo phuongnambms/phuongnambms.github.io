@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Multi-Purpose Smoke Detector</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation">
+
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- Top Bar -->
+			<div id="topBar" class="text-center">
+
+				<!-- Logo -->
+				<a class="logo" href="https://hcmute.edu.vn/">
+					<img class="pull-left" src="SPKT_logo.png" alt="" width="25%" style="margin:0 0 0 170px;"/>
+					<img class="pull-right" src="logo CLC.png" alt="" width="16%" style="margin:13px 170px 2px 0;"/>
+				</a>
+			</div>
+			<!-- /Top Bar -->
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.noborder 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent noborder"
+			-->
+			<div id="header" class="sticky header-sm clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container" style="display: flex; justify-content: center;">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse pull-left nav-main-collapse collapse">
+							<nav class="nav-main">
+
+								<!--
+									NOTE
+									
+									For a regular link, remove "dropdown" class from LI tag and "dropdown-toggle" class from the href.
+									Direct Link Example: 
+
+									<li>
+										<a href="#">HOME</a>
+									</li>
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-hover-animate">
+									<li class="dropdown"><!-- HOMEPAGE -->
+										<a href="Home page.html" style="padding: 0 30px;">
+											<span class="topMain-icon ">
+												<i class="fa-solid fa-house"></i>
+												HOME
+											</span>
+										</a>
+									</li>
+
+									<li class="dropdown nav-animate-fadeIn "><!-- MONITORING -->
+										<a class="dropdown-toggle" href="#" style="padding: 0 30px;">
+											<span class="topMain-icon">
+												<i class="fa-solid fa-desktop"></i>
+												MONITORING
+											</span>
+										</a>
+										<ul class="dropdown-menu">
+											<li><a href="Monitoring - Fire Alarm.html">Fire Alarm</a></li>
+											<li><a href="Power Monitoring.html">Power</a></li>
+										</ul>
+									</li>
+
+									<li class="dropdown nav-animate-fadeIn "><!-- HISTORY -->
+										<a class="dropdown-toggle" href="#" style="padding: 0 30px;">
+											<span class="topMain-icon">
+												<i class="fa-solid fa-clock-rotate-left"></i>
+												HISTORY
+											</span>
+										</a>
+										<ul class="dropdown-menu">
+											<li><a href="feature-header-side-left-2.html">Fire Alarm</a></li>
+											<li><a href="feature-header-side-right-1.html">Power</a></li>
+											<li><a href="feature-header-side-right-1.html">Users</a></li>
+										</ul>
+									</li>
+
+									<li class="dropdown nav-animate-fadeIn active"><!-- DEVICES -->
+										<a class="dropdown-toggle" href="#" style="padding: 0 30px;">
+											<span class="topMain-icon">
+												<i class="fa-sharp fa-solid fa-memory"></i>
+												DEVICES
+											</span>
+										</a>
+										<ul class="dropdown-menu">
+											<li><a href="Device - BCU.html">Building Control Unit (BCU)</a></li>
+											<li><a href="Device - DDC.html">Direct Digital Control (DDC)</a></li>
+											<li><a href="Device - Multi-Purpose Smoke Detector.html">Multi-Purpose Smoke Detector</a></li>
+											<li><a href="Device - Mechanical Rate-of-Rise Heat Detector.html">Mechanical Rate-of-Rise Heat Detector</a></li>
+											<li><a href="Device - Mechanical Fixed Temperature Heat Detector.html">Mechanical Fixed Temperature Heat Detector</a></li>
+											<li><a href="Device - Combination Smoke and Heat Detector.html">Combination Smoke and Heat Detector</a></li>
+											<li><a href="Device - Manual Call Point (Button).html">Manual Call Point (Button)</a></li>
+											<li><a href="Device - Manual Call Point (Mirror).html">Manual Call Point (Mirror)</a></li>
+											<li><a href="Device - Electronic Sounder and Beacon.html">Electronic Sounder and Beacon</a></li>
+											<li><a href="Device - Elecnova.html">Elecnova - Power monitoring</a></li>
+										</ul>
+									</li>
+
+									<li class="dropdown nav-animate-fadeIn"><!-- MODELS -->
+										<a class="dropdown-toggle" href="#" style="padding: 0 30px;">
+											<span class="topMain-icon">
+												<i class="fa-solid fa-file-image"></i>
+												MODELS
+											</span>
+										</a>
+										<ul class="dropdown-menu">
+											<li><a href="feature-header-side-left-2.html">Control Panel</a></li>
+											<li><a href="feature-header-side-right-1.html">Real model</a></li>
+											<li><a href="feature-header-side-right-2.html">BMS control interface</a></li>
+										</ul>
+									</li>
+
+									<li class="dropdown"><!-- CONTACTS -->
+										<a href="Contacts.html" style="padding: 0 30px;">
+											<span class="topMain-icon ">
+												<i class="fa-solid fa-address-book"></i>
+												CONTACTS
+											</span>
+										</a>
+									</li>
+
+									<li class="dropdown"><!-- LOG OUT -->
+										<a href="Pre-Home page.html" style="padding: 0 30px;">
+											<span class="topMain-icon ">
+												<i class="fa-solid fa-right-from-bracket"></i>
+												LOG OUT
+											</span>
+										</a>
+									</li>
+
+									<!-- 
+										MENU ANIMATIONS
+											.nav-animate-fadeIn
+											.nav-animate-fadeInUp
+											.nav-animate-bounceIn
+											.nav-animate-bounceInUp
+											.nav-animate-flipInX
+											.nav-animate-flipInY
+											.nav-animate-zoomIn
+											.nav-animate-slideInUp
+
+											.nav-hover-animate 		= animate text on hover
+
+											.hover-animate-bounceIn = bounceIn effect on mouse over of main menu
+									-->
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+			<!-- 
+				PAGE HEADER 
+				
+				CLASSES:
+					.page-header-xs	= 20px margins
+					.page-header-md	= 50px margins
+					.page-header-lg	= 80px margins
+					.page-header-xlg= 130px margins
+					.dark			= dark page header
+
+					.shadow-before-1 	= shadow 1 header top
+					.shadow-after-1 	= shadow 1 header bottom
+					.shadow-before-2 	= shadow 2 header top
+					.shadow-after-2 	= shadow 2 header bottom
+					.shadow-before-3 	= shadow 3 header top
+					.shadow-after-3 	= shadow 3 header bottom
+			-->
+			<section class="page-header dark page-header-xs">
+				<div class="container">
+
+					<h1>DEVICES</h1>
+
+					<!-- breadcrumbs -->
+					<ol class="breadcrumb">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Devices</a></li>
+						<li class="active">Multi-Purpose Smoke Detector AH-0311-2</li>
+					</ol><!-- /breadcrumbs -->
+
+				</div>
+			</section>
+			<!-- /PAGE HEADER -->
+
+
+
+
+			<!-- -->
+			<section>
+				<div class="container">
+
+					<h1 class="blog-post-title">MULTI-PURPOSE SMOKE DETECTOR (HORING LIH AH-0311-2)</h1>
+					<ul class="blog-post-info list-inline">
+						<li>
+							<a href="#">
+								<i class="fa fa-clock-o"></i> 
+								<span class="font-lato">October 20, 2022</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<i class="fa fa-user"></i> 
+								<span class="font-lato">Phuong Nam</span>
+							</a>
+						</li>
+					</ul>
+
+					<!-- OWL SLIDER -->
+					<div class="owl-carousel buttons-autohide controlls-over" data-plugin-options='{"items": 1, "autoHeight": false, "navigation": true, "pagination": true, "transitionStyle":"fadeUp", "progressBar":"false"}'>
+						<a class="col-md-offset-3 lightbox" href="demo_files/images/1200x800/10-min.jpg" data-plugin-options='{"type":"image"}'>
+							<img class="img-responsive" src="assets/images/Pictures/ĐẦU BÁO KHÓI QUANG AH-0311-2.jpg" alt="" width="450px"/>
+						</a>
+					</div>
+					<!-- /OWL SLIDER -->
+
+					<!-- IMAGE -->
+					<!--
+					<figure class="margin-bottom-20">
+						<img class="img-responsive" src="demo_files/images/content_slider/10-min.jpg" alt="img" />
+					</figure>
+					-->
+					<!-- /IMAGE -->
+
+					<!-- VIDEO -->
+					<!--
+					<div class="margin-bottom-20 embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="http://player.vimeo.com/video/8408210" width="800" height="450"></iframe>
+					</div>
+					-->
+					<!-- /VIDEO -->
+
+
+					<!-- article content -->
+
+				
+					<h2>Feature</h2>
+					<ul>
+						<li>The AH-0311-2 has a special chamber design that greatly reduces dust levels and improves accuracy</li>
+						<li>LED light for 360º display, enhance connection stability</li>
+                        <li>Power Supply: 24VDC</li>
+                        <li>Operating Voltage: 12 - 30VDC</li>
+                        <li>Standby current: 35µA</li>
+                        <li>Received current: 120mA</li>
+                        <li>Alarm current: 40mA</li>
+                        <li>Material: Fire-proof plastic</li>
+                        <li>Sensitivity: EN54 standard</li>
+                        <li>Ambient temperature: -10°C ~ +55°C</li>
+                        <li>Dimension (D x H): 102 x 49mm</li>
+                        <li>Weight: 155g</li>
+					</ul>
+
+					<h2>Specification</h2>
+					<div class="table-responsive">
+						<table class="table table-bordered nomargin">
+							<tbody>
+								<tr>
+									<td>Voltage range</td>
+									<td>12 ~ 30VDC</td>
+								</tr>
+								<tr>
+									<td>Alarm Current @24VDC 470Ω</td>
+									<td>40mA</td>
+								</tr>
+								<tr>
+									<td>Standby Current</td>
+									<td>35 µA</td>
+								</tr>
+								<tr>
+									<td>Sensitivity Setting</td>
+									<td>Comply to EN54</td>
+								</tr>
+								<tr>
+									<td>Ambient Temperature</td>
+									<td>-10°C ~ +55°C</td>
+								</tr>
+								<tr>
+									<td>Order information</td>
+									<td>2-wire</td>
+								</tr>
+								<tr>
+									<td>Color</td>
+									<td>White</td>
+							</tbody>
+						</table>
+					</div>
+
+					<p></p>
+
+					<h2>Reference</h2>
+					<ul>
+						<ol><a href="https://www.horinglih.com/backend/?p_action_name=get-file&id=10006183">Horing Lih AH-0311 catalogue.pdf</a></ol>
+						<ol><a href="https://www.horinglih.com/backend/?p_action_name=get-file&id=10001068">Horing Lih AH-0311 manual.pdf</a></ol>
+					</ul>
+                    
+					
+					<!-- /article content -->
+
+
+					<div class="divider divider-dotted"><!-- divider --></div>
+
+
+
+				</div>
+			</section>
+			<!-- / -->
+
+
+
+
+			<!-- FOOTER -->
+			<footer id="footer">
+
+				<div class="copyright">
+					<div class="container">
+						<ul class="pull-right nomargin list-inline mobile-block">
+							<li><a href="#">Solutions </a></li>
+							<li>&bull;</li>
+							<li><a href="#">Control and Automation</a></li>
+						</ul>
+						&copy; PNTECH Technology Joint Stock Company
+					</div>
+				</div>
+			</footer>
+			<!-- /FOOTER -->
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+
+		<script type="text/javascript" src="assets/js/scripts.js"></script>
+		
+		<!-- STYLESWITCHER - REMOVE -->
+		<script async type="text/javascript" src="demo_files/styleswitcher/styleswitcher.js"></script>
+	</body>
+</html>

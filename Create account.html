@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Register</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+
+		<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/fonts_1/iconic/css/material-design-iconic-font.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/util.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation" >
+
+
+		<!-- wrapper -->
+		<div id="wrapper" >
+
+			<!-- Top Bar -->
+			<div id="topBar" class="text-center">
+
+				<!-- Logo -->
+				<a class="logo" href="https://hcmute.edu.vn/">
+					<img class="pull-left" src="SPKT_logo.png" alt="" width="25%" style="margin: 0 0 0 170px;"/>
+					<img class="pull-right" src="logo CLC.png" alt="" width="16%" style="margin: 13px 170px 2px 0;"/>
+				</a>
+			</div>
+			<!-- /Top Bar -->
+
+
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.noborder 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent noborder"
+			-->
+
+
+
+			<!-- 
+				PAGE HEADER 
+				
+				CLASSES:
+					.page-header-xs	= 20px margins
+					.page-header-md	= 50px margins
+					.page-header-lg	= 80px margins
+					.page-header-xlg= 130px margins
+					.dark			= dark page header
+
+					.shadow-before-1 	= shadow 1 header top
+					.shadow-after-1 	= shadow 1 header bottom
+					.shadow-before-2 	= shadow 2 header top
+					.shadow-after-2 	= shadow 2 header bottom
+					.shadow-before-3 	= shadow 3 header top
+					.shadow-after-3 	= shadow 3 header bottom
+			-->
+			<section class="page-header dark page-header-xs">
+				<div class="container">
+
+					<h1>REGISTER</h1>
+
+					<!-- breadcrumbs -->
+					<ol class="breadcrumb">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Login</a></li>
+						<li class="active">Register</li>
+					</ol><!-- /breadcrumbs -->
+
+				</div>
+			</section>
+			<!-- /PAGE HEADER -->
+
+
+
+
+			<!-- -->
+			<section>
+				<div class="container">
+					
+					<div class="row">
+
+						<div class="col-md-6 col-md-offset-3">
+
+							<div class="box-static box-border-top padding-30">
+								<div class=" margin-bottom-12">
+									<h2 class="size-40 padding-20" style="text-align: center;"><strong>Register</strong></h2>
+								</div>
+
+								<form class="nomargin" method="post" action="#" autocomplete="off" onsubmit="signup()">
+									<div class="clearfix">
+												<!-- Fullname -->
+
+											<div class="wrap-input100 validate-input m-b-23" data-validate = "Fullname is required">
+												<span class="label-input100"><strong>Full name</strong></span>
+												<input class="input100" type="text" name="fullname" placeholder="Type your fullname" id="fullname">
+												<span class="focus-input100" data-symbol="&#xf106;"></span>
+											</div>
+
+
+											<!-- email -->
+
+											<div class="wrap-input100 validate-input m-b-23" data-validate = "Email is required">
+												<span class="label-input100"><strong>Email</strong></span>
+												<input class="input100" type="text" name="email" placeholder="Type your email" id="email">
+												<span class="focus-input100" data-symbol="&#xf159;"></span>
+												
+											</div>
+
+											<!-- Phone number -->
+
+											<div class="wrap-input100 validate-input m-b-23" data-validate = "Phone number is required">
+												<span class="label-input100"><strong>Phone number</strong></span>
+												<input class="input100" type="text" name="phonenumber" placeholder="Type your phone number" id="phonenumber">
+												<span class="focus-input100" data-symbol="&#xf155;"></span>
+											</div>
+
+											<!-- Username -->
+
+											<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
+												<span class="label-input100"><strong>Username</strong></span>
+												<input class="input100" type="text" name="username" placeholder="Type your username" id="username">
+												<span class="focus-input100" data-symbol="&#xf206;"></span>
+											</div>
+											
+											<!-- Password -->
+											
+											<div class="wrap-input100 validate-input" data-validate="Password is required">
+												<span class="label-input100"><strong>Password</strong></span>
+												<input class="input100" type="password" name="pass" placeholder="Type your password" id="password">
+												<span class="focus-input100" data-symbol="&#xf190;"></span>
+											</div>	
+									</div>
+
+									<div class="text-right p-t-8 p-b-31">
+									</div>
+									
+									<div class="container-login100-form-btn">
+										<div class="wrap-login100-form-btn">
+											<div class="login100-form-bgbtn"></div>
+											<button class="login100-form-btn">
+												 Sign up
+											</button>
+										</div>
+									</div>
+									
+									<div class="margin-top-30 text-center size-15">
+										<a href="Login.html"><strong>Back to login</strong></a>
+									</div>
+									
+								</form>
+
+							</div>
+
+						</div>
+					</div>
+					
+				</div>
+			</section>
+			<!-- / -->
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+		<script src="js/login.js"></script>
+		<script type="text/javascript" src="assets/js/scripts.js"></script>
+		
+		<!-- STYLESWITCHER - REMOVE -->
+		<script async type="text/javascript" src="demo_files/styleswitcher/styleswitcher.js"></script>
+	</body>
+</html>

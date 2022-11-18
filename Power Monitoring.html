@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Power Monitoring</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation">
+
+
+		<!-- wrapper -->
+		<div id="wrapper">
+			<!-- Top Bar -->
+			<div id="topBar" class="text-center">
+
+				<!-- Logo -->
+				<a class="logo" href="#">
+					<img class="pull-left" src="SPKT_logo.png" alt="" width="25%" style="margin: 0 0 0 170px;"/>
+					<img class="pull-right" src="logo CLC.png" alt="" width="16%" style="margin: 13px 170px 2px 0;"/>
+				</a>
+			</div>
+			<!-- /Top Bar -->
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.noborder 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent noborder"
+			-->
+			<div id="header" class="sticky header-sm clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container" style="display: flex; justify-content: center;">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse pull-left nav-main-collapse collapse">
+							<nav class="nav-main">
+
+								<!--
+									NOTE
+									
+									For a regular link, remove "dropdown" class from LI tag and "dropdown-toggle" class from the href.
+									Direct Link Example: 
+
+									<li>
+										<a href="#">HOME</a>
+									</li>
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-hover-animate">
+									<li class="dropdown"><!-- HOMEPAGE -->
+										<a href="Home page 2.html" style="padding: 0 30px;">
+											<span class="topMain-icon ">
+												<i class="fa-solid fa-house"></i>
+												HOME
+											</span>
+										</a>
+									</li>
+
+									<li class="dropdown active nav-animate-fadeIn "><!-- MONITORING -->
+										<a class="dropdown-toggle" href="Contacts.html" style="padding: 0 30px;">
+											<span class="topMain-icon">
+												<i class="fa-solid fa-desktop"></i>
+												MONITORING
+											</span>
+										</a>
+										<ul class="dropdown-menu">
+											<li><a href="Monitoring - Fire Alarm.html">Fire Alarm</a></li>
+											<li><a href="Power Monitoring.html">Power</a></li>
+										</ul>
+									</li>
+
+									<li class="dropdown nav-animate-fadeIn "><!-- HISTORY -->
+										<a class="dropdown-toggle" href="Contacts.html" style="padding: 0 30px;">
+											<span class="topMain-icon">
+												<i class="fa-solid fa-clock-rotate-left"></i>
+												HISTORY
+											</span>
+										</a>
+										<ul class="dropdown-menu">
+											<li><a href="feature-header-side-left-2.html">Fire Alarm</a></li>
+											<li><a href="feature-header-side-right-1.html">Power</a></li>
+											<li><a href="feature-header-side-right-1.html">Users</a></li>
+										</ul>
+									</li>
+
+									<li class="dropdown nav-animate-fadeIn"><!-- DEVICES -->
+										<a class="dropdown-toggle" href="#" style="padding: 0 30px;">
+											<span class="topMain-icon">
+												<i class="fa-sharp fa-solid fa-memory"></i>
+												DEVICES
+											</span>
+										</a>
+										<ul class="dropdown-menu">
+											<li><a href="Device - BCU.html">Building Control Unit (BCU)</a></li>
+											<li><a href="Device - DDC.html">Direct Digital Control (DDC)</a></li>
+											<li><a href="Device - Multi-Purpose Smoke Detector.html">Multi-Purpose Smoke Detector</a></li>
+											<li><a href="Device - Mechanical Rate-of-Rise Heat Detector.html">Mechanical Rate-of-Rise Heat Detector</a></li>
+											<li><a href="Device - Mechanical Fixed Temperature Heat Detector.html">Mechanical Fixed Temperature Heat Detector</a></li>
+											<li><a href="Device - Combination Smoke and Heat Detector.html">Combination Smoke and Heat Detector</a></li>
+											<li><a href="Device - Manual Call Point (Button).html">Manual Call Point (Button)</a></li>
+											<li><a href="Device - Manual Call Point (Mirror).html">Manual Call Point (Mirror)</a></li>
+											<li><a href="Device - Electronic Sounder and Beacon.html">Electronic Sounder and Beacon</a></li>
+											<li><a href="Device - Elecnova.html">Elecnova - Power monitoring</a></li>
+										</ul>
+									</li>
+
+									<li class="dropdown nav-animate-fadeIn"><!-- MODELS -->
+										<a class="dropdown-toggle" href="#" style="padding: 0 30px;">
+											<span class="topMain-icon">
+												<i class="fa-solid fa-file-image"></i>
+												MODELS
+											</span>
+										</a>
+										<ul class="dropdown-menu">
+											<li><a href="feature-header-side-left-2.html">Control Panel</a></li>
+											<li><a href="feature-header-side-right-1.html">Real model</a></li>
+											<li><a href="feature-header-side-right-2.html">BMS control interface</a></li>
+										</ul>
+									</li>
+
+									<li class="dropdown"><!-- HOMEPAGE -->
+										<a href="Contacts.html" style="padding: 0 30px;">
+											<span class="topMain-icon ">
+												<i class="fa-solid fa-address-book"></i>
+												CONTACTS
+											</span>
+										</a>
+									</li>
+
+									<!-- 
+										MENU ANIMATIONS
+											.nav-animate-fadeIn
+											.nav-animate-fadeInUp
+											.nav-animate-bounceIn
+											.nav-animate-bounceInUp
+											.nav-animate-flipInX
+											.nav-animate-flipInY
+											.nav-animate-zoomIn
+											.nav-animate-slideInUp
+
+											.nav-hover-animate 		= animate text on hover
+
+											.hover-animate-bounceIn = bounceIn effect on mouse over of main menu
+									-->
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+			<!-- 
+				PAGE HEADER 
+				
+				CLASSES:
+					.page-header-xs	= 20px margins
+					.page-header-md	= 50px margins
+					.page-header-lg	= 80px margins
+					.page-header-xlg= 130px margins
+					.dark			= dark page header
+
+					.shadow-before-1 	= shadow 1 header top
+					.shadow-after-1 	= shadow 1 header bottom
+					.shadow-before-2 	= shadow 2 header top
+					.shadow-after-2 	= shadow 2 header bottom
+					.shadow-before-3 	= shadow 3 header top
+					.shadow-after-3 	= shadow 3 header bottom
+			-->
+			<section class="page-header dark page-header-xs">
+				<div class="container">
+
+					<h1>MONITORING</h1>
+
+					<!-- breadcrumbs -->
+					<ol class="breadcrumb">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Monitoring</a></li>
+						<li class="active">Power</li>
+					</ol><!-- /breadcrumbs -->
+
+				</div>
+			</section>
+			<!-- /PAGE HEADER -->
+
+
+
+
+			<!-- -->
+			<section>
+				<!-- <div>
+					<img src="assets/images/Pictures/BACKGROUND.png" alt="" style="width:100vw; height: 90vh;">
+				</div> -->
+				
+				<div class="container">
+					
+					<div class="row">
+
+						<!-- POST ITEM -->
+						<div class="blog-post-item col-md-6 col-sm-6 text-center" style="height: 400px; margin: 0;">
+							<h3 style="margin-bottom:0;">1ST POWER METER</h3>
+							<img class="img-responsive" src="assets/images/Pictures/ELECNOVA_1.png" alt="" style="height:306px; width:220px; position: absolute; left: 30%; top: 14%;">
+							<!-- IMAGE -->
+							
+
+						</div>
+						<!-- /POST ITEM -->
+
+
+						<!-- POST ITEM -->
+						<div class="blog-post-item col-md-6 col-sm-6 text-center" style="height: 400px; margin: 0;">
+
+							<h3 style="margin-bottom:0;">1ST FLOOR POWER USAGE</h3>
+
+							<div id="flot-pie" class="flot-chart height-300" style="margin: 15px auto ;">
+							
+							</div>
+
+						</div>
+						<!-- /POST ITEM -->
+
+
+						<!-- POST ITEM -->
+						<div class="blog-post-item col-md-6 col-sm-6 text-center">
+
+							<h3 style="margin: 15px;">1ST FLOOR LOAD GRAPH (WEEK)</h3>
+							
+							<!-- -->
+							<section>
+								<div class="container">
+
+									<div class="row">
+
+										<div class="col-md-6">
+											<canvas class="chartjs" id="lineChartCanvas" width="547" height="300"></canvas>
+										
+										</div>
+
+
+									</div>
+
+								</div>
+							</section>
+							<!-- / -->
+
+						</div>
+						<!-- /POST ITEM -->
+
+						<!-- POST ITEM -->
+						<div class="blog-post-item col-md-6 col-sm-6 text-center">
+
+							<h3 style="margin:15px;">1ST FLOOR LOAD GRAPH (YEAR)</h3>
+							
+							<!-- -->
+							<section>
+								<div class="container">
+
+									<div class="row">
+
+										<div class="col-md-6">
+											<canvas class="chartjs" id="barChartCanvas" width="547" height="300"></canvas>
+										
+										</div>
+
+
+									</div>
+
+								</div>
+							</section>
+							<!-- / -->
+
+						</div>
+						<!-- /POST ITEM -->						
+
+					</div>
+
+				</div>
+			</section>
+			<!-- / -->
+
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+
+		<script type="text/javascript" src="assets/js/scripts.js"></script>
+		
+		<!-- STYLESWITCHER - REMOVE -->
+		<script async type="text/javascript" src="demo_files/styleswitcher/styleswitcher.js"></script>
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<script type="text/javascript">
+			/**
+				Chart.js
+				http://www.chartjs.org/
+			**/
+			loadScript(plugin_path + 'chart.chartjs/Chart.min.js', function() {
+
+				var lineChartCanvas = {
+					labels : ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+					datasets : [
+						{
+							label: "My Second dataset",
+							fillColor : "rgba(30,209,101,0.7)",
+							strokeColor : "rgba(151,187,205,1)",
+							pointColor : "rgba(151,187,205,1)",
+							pointStrokeColor : "#fff",
+							pointHighlightFill : "#fff",
+							pointHighlightStroke : "rgba(151,187,205,1)",
+							data : [28,48,40,19,96,27,100]
+						}
+					]
+				};
+
+				var barChartCanvas = {
+					labels : ["January","February","March","April","May","June","July","August","September","October","November","December"],
+					datasets : [
+						{
+							fillColor: "rgba(244,98,42,1)",
+
+							// strokeColor : "rgba(220,220,220,0.8)",
+							// highlightFill: "rgba(220,220,220,0.75)",
+							// highlightStroke: "rgba(220,220,220,1)",
+							data : [65,59,90,81,56,55,50,45,56,77,84,150]
+						}
+					]
+				};
+
+
+				var radarChartCanvas = {
+					labels : ["A","B","C","D","E","F","G"],
+					datasets: [
+						{
+							label: "My First dataset",
+							fillColor: "rgba(220,220,220,0.2)",
+							strokeColor: "rgba(220,220,220,1)",
+							pointColor: "rgba(220,220,220,1)",
+							pointStrokeColor: "#fff",
+							pointHighlightFill: "#fff",
+							pointHighlightStroke: "rgba(220,220,220,1)",
+							data: [65,59,90,81,56,55,40]
+						},
+						{
+							label: "My Second dataset",
+							fillColor: "rgba(151,187,205,0.2)",
+							strokeColor: "rgba(151,187,205,1)",
+							pointColor: "rgba(151,187,205,1)",
+							pointStrokeColor: "#fff",
+							pointHighlightFill: "#fff",
+							pointHighlightStroke: "rgba(151,187,205,1)",
+							data: [28,48,40,19,96,27,100]
+						}
+					]
+				};
+
+				var pieChartCanvas = [
+					{
+						value: 30,
+						color:"#F38630"
+					},
+					{
+						value : 50,
+						color : "#E0E4CC"
+					},
+					{
+						value : 100,
+						color : "#69D2E7"
+					},
+					{
+						value : 45,
+						color : "#1E73BE"
+					}
+				];
+
+				var polarAreaChartCanvas = [
+					{
+						value : 62,
+						color: "#D97041"
+					},
+					{
+						value : 70,
+						color: "#C7604C"
+					},
+					{
+						value : 41,
+						color: "#21323D"
+					},
+					{
+						value : 24,
+						color: "#9D9B7F"
+					},
+					{
+						value : 55,
+						color: "#7D4F6D"
+					},
+					{
+						value : 18,
+						color: "#584A5E"
+					}
+				];
+
+				var doughnutChartCanvas = [
+					{
+						value: 30,
+						color:"#F7464A"
+					},
+					{
+						value : 50,
+						color : "#46BFBD"
+					},
+					{
+						value : 100,
+						color : "#FDB45C"
+					},
+					{
+						value : 40,
+						color : "#949FB1"
+					},
+					{
+						value : 120,
+						color : "#4D5360"
+					}
+				];
+
+
+				// lineChartCanvas
+				var ctx = document.getElementById("lineChartCanvas").getContext("2d");
+				new Chart(ctx).Line(lineChartCanvas);
+
+				// barChartCanvas
+				var ctx = document.getElementById("barChartCanvas").getContext("2d");
+				new Chart(ctx).Bar(barChartCanvas);
+
+				// radarChartCanvas
+				var ctx = document.getElementById("radarChartCanvas").getContext("2d");
+				new Chart(ctx).Radar(radarChartCanvas);
+
+				// polarAreaChartCanvas
+				var ctx = document.getElementById("polarAreaChartCanvas").getContext("2d");
+				new Chart(ctx).PolarArea(polarAreaChartCanvas);
+
+				// pieChartCanvas
+				var ctx = document.getElementById("pieChartCanvas").getContext("2d");
+				new Chart(ctx).Pie(pieChartCanvas);
+
+				// doughnutChartCanvas
+				var ctx = document.getElementById("doughnutChartCanvas").getContext("2d");
+				new Chart(ctx).Doughnut(doughnutChartCanvas);
+
+			});
+
+
+
+			loadScript(plugin_path + "chart.flot/jquery.flot.min.js", function(){
+				loadScript(plugin_path + "chart.flot/jquery.flot.resize.min.js", function(){
+					loadScript(plugin_path + "chart.flot/jquery.flot.time.min.js", function(){
+						loadScript(plugin_path + "chart.flot/jquery.flot.fillbetween.min.js", function(){
+							loadScript(plugin_path + "chart.flot/jquery.flot.orderBars.min.js", function(){
+								loadScript(plugin_path + "chart.flot/jquery.flot.pie.min.js", function(){
+									loadScript(plugin_path + "chart.flot/jquery.flot.tooltip.min.js", function(){
+									
+										// demo js script - or add js code directly here!
+										loadScript("assets/js/view/demo.graphs.flot.js");
+
+									});
+								});
+							});
+						});
+					});
+				});
+			});
+
+
+
+		</script>
+	</body>
+</html>

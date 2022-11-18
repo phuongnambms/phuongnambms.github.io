@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+    <div style="display: flex;">
+      <h5>Voltage:</h5>
+      <h5 id="Voltage"></h5>
+    </div>
+
+    <div style="display: flex;">
+      <h5>Current:</h5>
+      <h5 id="Current"></h5>
+    </div>
+    
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script> 
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyAEiDMSzJts0nNbl3LAda5SQDgcAWlLcug",
+          authDomain: "phuongnam-128.firebaseapp.com",
+          projectId: "phuongnam-128",
+          storageBucket: "phuongnam-128.appspot.com",
+          messagingSenderId: "950736073942",
+          appId: "1:950736073942:web:90eaf91205fa032cbb8577",
+          measurementId: "G-1RGLKLN6GL"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        // const app = initializeApp(firebaseConfig);
+        // const analytics = getAnalytics(app);
+
+
+        var item1 = document.getElementById('Voltage');
+        var dbRef = firebase.database().ref().child('Voltage');
+        dbRef.on('value', snap => Voltage.innerText = snap.val());
+
+        var item1 = document.getElementById('Current');
+        var dbRef = firebase.database().ref().child('Current');
+        dbRef.on('value', snap => Current.innerText = snap.val());
+      </script>
+</body>
+</html>
